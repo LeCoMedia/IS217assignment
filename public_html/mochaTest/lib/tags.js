@@ -1,17 +1,11 @@
 exports = module.exports = {};
 
-exports.parse = function() {
-	
-}
-
-exports.parse = function () {
+exports.parse = function(args, defaults) {
 	var options = {}
-	
-	return options;
-}
+		if (typeof defaults === "object" && !(defaults instanceof Array)) {
+    		options = defaults
+   		}
 
-exports.parse = function(args) {
-	var options = {}
 	for (var i in args) { //cycle throuhgh args
 		var arg = args [i];
 		//check if long formed tag
